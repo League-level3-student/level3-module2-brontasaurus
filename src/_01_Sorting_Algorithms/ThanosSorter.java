@@ -49,7 +49,7 @@ public class ThanosSorter extends Sorter {
     void sort(int[] arr, SortingVisualizer display) {
         
     	int start = 0;
-    	int end = arr.length;
+    	int end = arr.length-1;
     	Random ran = new Random();
     	int coinFlip = ran.nextInt(2);
     	
@@ -70,8 +70,8 @@ public class ThanosSorter extends Sorter {
     		
     		coinFlip = ran.nextInt(2);
     		display.updateDisplay();
-    		
         }
+    	
     }
     
     boolean isSorted(int[] array) {
