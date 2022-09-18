@@ -95,13 +95,41 @@ public class Algorithms {
     	
     	return longest;
     }
+
+    
+    
+    public static boolean containsSOS(List<String> message) {
+    	String morse = "... --- ...";
+      if (message.contains(morse)){
+    	return true;
+    	
+   }
+      
+      return false;
+    }
     
     
     
+    public static List<Double> sortScores(List<Double> results) {
+    	double score = 0;
+    	
+    	for (int j = 0; j < results.size()-1; j++) {
+    		for (int i = j+1; i < results.size(); i++) {
+    			if (results.get(i) > results.get(j)) {
+    				score = results.get(j);
+    				results.get(j).equals(results.get(i));
+    				results.get(i).equals(score);
+    			}
+    		}
+    		
+    		}
+    	
+    	return results;
+    }
     
     
-    
-    
+   
+
     
     
     
