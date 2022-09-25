@@ -115,17 +115,62 @@ public class Algorithms {
     	
     	for (int j = 0; j < results.size()-1; j++) {
     		for (int i = j+1; i < results.size(); i++) {
-    			if (results.get(i) > results.get(j)) {
+    			if (results.get(i) < results.get(j)) {
     				score = results.get(j);
-    				results.get(j).equals(results.get(i));
-    				results.get(i).equals(score);
+    				results.set(j,results.get(i));
+    				results.set(i, score);
     			}
     		}
+    		
+    		
     		
     		}
     	
     	return results;
     }
+    
+    
+    public static List<String> sortDNA(List<String> DNA){
+    	String count;
+    	
+    	for (int j = 0; j < DNA.size()-1; j++) {
+    		for (int i = j+1; i < DNA.size(); i++) {
+    			if (DNA.get(i).length() < DNA.get(j).length()) {
+    				count = DNA.get(j);
+    				DNA.set(j,DNA.get(i));
+    				DNA.set(i, count);
+    			}
+    		}
+    		
+    		
+    		
+    		}
+    
+    	
+    	return DNA;
+    }
+    
+    
+    public static List<String> sortWords(List<String> words){
+    
+    String count;
+	
+	for (int j = 0; j < words.size()-1; j++) {
+		for (int i = j+1; i < words.size(); i++) {
+			if (words.get(i).compareTo(words.get(j)) < 0) {
+				count = words.get(j);
+				words.set(j, words.get(i));
+				words.set(i, count);
+			}
+		}
+		
+		
+		
+		}
+
+	
+	return words;
+}
     
     
    
